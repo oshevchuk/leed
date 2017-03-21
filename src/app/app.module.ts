@@ -5,13 +5,28 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import {routing, appRoutingProviders} from './app.routing';
-import {AUTH_PROVIDERS} from 'angular2-jwt';
+// import {AUTH_PROVIDERS} from 'angular2-jwt';
 
 import { AppComponent } from './app.component';
 import {HomeComponent} from "./components/home/home.component";
 import {ProfileComponent} from "./components/profile/profile.component";
 import {Auth} from "./services/auth.service";
 import {AuthGuard} from "./auth.guard";
+
+
+//AUTH_PROVIDERS - fix
+// export function authFactory(http: Http, options: RequestOptions) {
+//     return new AuthHttp(new AuthConfig({
+//         // Config options if you want
+//     }), http, options);
+// };
+//
+// // Include this in your ngModule providers
+// export const authProvider = {
+//     provide: AuthHttp,
+//     deps: [Http, RequestOptions],
+//     useFactory: authFactory
+// };
 
 @NgModule({
   declarations: [
@@ -23,7 +38,7 @@ import {AuthGuard} from "./auth.guard";
   ],
   providers: [
       appRoutingProviders,
-      AUTH_PROVIDERS,
+      // AUTH_PROVIDERS,
       Auth,
       AuthGuard
   ],
