@@ -4,12 +4,12 @@
 import { Component } from '@angular/core';
 import {Auth} from "../../services/auth.service";
 
+// import {HttpService} from "../../services/http.service";
 
 @Component({
     moduleId: module.id,
     selector: 'home',
     templateUrl: './home.component.html',
-
 })
 export class HomeComponent {
     ans:number=0;
