@@ -3,4 +3,5 @@
  */
 export  const  options ={
     // allowedConnections: ['twitter', 'facebook']
+    allowSignUp: true,
 }

@@ -2,6 +2,8 @@
  * Created by Oshevchuk on 20.03.2017.
  */
 import { Component } from '@angular/core';
+import { Http, Response } from '@angular/http';
+
 import {Auth} from "../../services/auth.service";
 
 @Component({
