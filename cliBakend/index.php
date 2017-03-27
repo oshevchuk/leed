@@ -21,8 +21,12 @@ if(isset($_POST)){
 //    echo $_POST["suggest"].'::';
 //    print_r($_POST["suggest"]);
 //    print_r($user);
+//    $data=json_decode(json_encode($_POST["suggest"]), true);
     $data=json_decode($_POST["suggest"]);
     print_r($data);
+    foreach ($data as $key => $value) {
+        echo $key.':::'.$value.'..<br>';
+    }
 //
 //    echo $data->email;
 }
