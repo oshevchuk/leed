@@ -1,9 +1,18 @@
-/**
- * Created by Oshevchuk on 27.03.2017.
- */
-var user=require('./user');
+var http =require('http');
+var url=require('url');
 
 
-var vasa=new user.User("vassa");
-var peta=new user.User("pera");
-vasa.hello(peta);
+var server=new http.Server(function (req, res) {
+    // console.log(req.method, req.url);
+    var urlParsed=url.parse(req.url, true);
+    // console.log(urlParsed);
+    
+    if(urlParsed.pathname=='/echo' && urlParsed.query.message){
+        res.end(urlParsed.query.message);
+    }else {
+        res.end("not found");
+    }
+});
+
+
+server.listen(1300, 'localhost');
