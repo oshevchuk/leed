@@ -1,41 +1,46 @@
-/**
- * Created by Oshevchuk on 29.03.2017.
- */
-var express=require('express');
-var bodyParser=require('body-parser');
+const Hapi = require('hapi');
+const MySQL = require('mysql');
 
-var app=express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+const server = new Hapi.Server();
 
-var artists=[
-    {
-        id:1 ,
-        name: 'meta'
-    },{
-        id:2 ,
-        name: 'gogi'
-    },{
-        id:3 ,  
-        name: 'deep'
+const connection=MySQL.createConnection({
+    host:'localhost',
+    user:'root',
+    password:'',
+    database:'nodejs'
+});
+
+server.connection({
+    host: 'localhost',
+    port: 3000
+});
+
+server.route({
+    method: 'GET',
+    path: '/hello',
+    handler: function (request, reply) {
+        return reply('hello')
     }
-];
-
-app.get('/', function (req, res) {
-    res.send('ok');
 });
 
-app.get('/artists', function (req, res) {
-    res.send(artists);
+server.route({
+    method: 'GET',
+    path: '/users',
+    handler: function (request, reply) {
+        connection.query('SELECT uid, username, email FROM users',
+        function (err, results, fields) {
+            if(err) throw error;
+
+            reply(results);
+        })
+    }
 });
 
-app.get('/artists/:id', function (req, res) {
-    var artist=artists.find(function (artist) {
-        return artist.id===Number(req.params.id);
-    });
-    res.send(artist);
-});
+connection.connect();
 
-app.listen(3000, function () {
-    console.log('API start')
+server.start(function (err) {
+    if(err){
+        throw err;
+    }
+    console.log("running");
 });
