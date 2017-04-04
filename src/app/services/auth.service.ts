@@ -80,7 +80,8 @@ export class Auth {
                 //     .toPromise()
                 //     .then((response: Response) => response.json())
                 
-                $.post("http://clibakend:83/", {suggest: JSON.stringify(profile)}, function(result){
+                // $.post("http://clibakend:83/", {suggest: JSON.stringify(profile)}, function(result){
+                $.post("http://localhost:3000/users", {suggest: JSON.stringify(profile)}, function(result){
                     // alert(result);
                     console.log(result);
                 });
