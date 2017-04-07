@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-
+import { Platform } from 'ionic-angular';
 import {AlertController} from 'ionic-angular';
 
 @Component({
@@ -10,9 +10,12 @@ import {AlertController} from 'ionic-angular';
 export class TestPage {
     testCheckboxOpen: boolean;
     testCheckboxResult;
-    
-    constructor(public navCtrl:NavController, public alertCtrl:AlertController) {
 
+    constructor(public navCtrl:NavController, public alertCtrl:AlertController, public plt: Platform) {
+        // alert(this.plt.is('cordova'));
+        console.log(this.plt.is('core'));
+        // console.log(plt);
+        // console.log(plt.platform());
     }
 
     showCheckbox(){

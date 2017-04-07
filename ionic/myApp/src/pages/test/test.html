@@ -11,6 +11,117 @@ thia is some test page
   <button ion-button block color="dark" (click)="showAlert()" class="mini">show</button>
   <button ion-button block color="dark" (click)="showCheckbox()" >chek</button>
 
-  
+  <ion-card class="card">
+    <img src="assets/img/images.jpg" alt="">
+    <ion-card-content>
+      <ion-card-title>
+        Bike
+      </ion-card-title>
+      <p>
+        this is fuking bike
+      </p>
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="musical-notes" item-left style="color: #d03e84"></ion-icon>
+      Album
+      <ion-badge item-right>38</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="logo-twitter" item-left style="color: #55acee"></ion-icon>
+      Followers
+      <ion-badge item-right>28</ion-badge>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-card class="adv-map">
+    <div style="position: relative">
+      <ion-fab right top>
+        <button ion-fab class="fab-map">
+          <ion-icon name='pin'></ion-icon>
+        </button>
+      </ion-fab>
+    </div>
+    <ion-item>
+      <ion-icon color="subtle" large item-left name='football'></ion-icon>
+      <h2>Museum of Football</h2>
+      <p>11 N. Way St, Madison, WI 53703</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-left name='wine'></ion-icon>
+      <h2>Institute of Fine Cocktails</h2>
+      <p>14 S. Hop Avenue, Madison, WI 53703</p>
+    </ion-item>
+    <ion-item actions>
+      <span ion-text item-left color="secondary" class="item-bold">18 min</span>
+      <span ion-text item-left color="subtle">(2.6 mi)</span>
+      <button ion-button color="primary" clear item-right icon-left>
+        <ion-icon name='navigate'></ion-icon>
+        Start
+      </button>
+    </ion-item>
+
+  </ion-card>
+
+
+  <ion-fab top right edge>
+    <button ion-fab color="vibrant" mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab left top>
+    <button ion-fab color="secondary"><ion-icon name="arrow-dropright"></ion-icon></button>
+    <ion-fab-list side="right">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab left bottom>
+    <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab center middle>
+    <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="primary"><ion-icon name="logo-vimeo"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="left">
+      <button ion-fab color="light"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="right">
+      <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab right middle>
+    <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
 
 </ion-content>
