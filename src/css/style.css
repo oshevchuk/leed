@@ -1,3 +1,19 @@
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #133; }
+.profile .h2 {
+  margin-top: 0px; }
+
+.profile .avatar {
+  width: 200px;
+  height: 200px; }
+
+.profile .prof_img {
+  float: left; }
+
+.profile .prof_info {
+  float: left;
+  margin-left: 20px; }
+
+.profile .prof_info:after {
+  clear: both; }
+
+.profile table td:first-child {
+  width: 150px; }

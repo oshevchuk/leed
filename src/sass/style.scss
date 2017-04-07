@@ -2,6 +2,44 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: #133;
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+  //font: 100% $font-stack;
+  //color: $primary-color;
+}
+
+.profile{
+  .left-menu{
+    //background-color: lightgray;
+  }
+
+  .user_info{
+    //background-color: #10b3ee;
+  }
+
+  .h2{
+    margin-top: 0px;
+  }
+
+  .avatar{
+    width: 200px;
+    height: 200px;
+  }
+
+  .prof_img{
+    float: left;
+  }
+
+  .prof_info{
+    float: left;
+    margin-left: 20px;
+  }
+
+  .prof_info:after{
+    clear: both;
+  }
+
+  table{
+    td:first-child{
+      width: 150px;
+    }
+  }
 }

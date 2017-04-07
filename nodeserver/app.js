@@ -172,6 +172,31 @@ app.post('/userlogin', function (req, res) {
     // console.log(suggest.email);
 });
 
+app.post('/checktoken', function (req, res) {
+    connection.getConnection(function (error, tempCont) {
+        if (!!error) {
+            connection.release();
+        } else {
+            tempCont.query("",
+                function (err, rows, fields) {
+                    tempCont.release();
+                    if (err) console.log('err');
+                    else {
+                        if (rows.length == 0) {
+                            // console.log("empty");
+                        }else{
+                            // console.log(rows[0]);
+                        }
+                    }
+                });
+        }
+    });
+});
+
+app.get('/info', function (req, res) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.end("okokokok");
+});
 
 app.listen(3000, function () {
     console.log('start');

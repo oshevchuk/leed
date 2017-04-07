@@ -11,6 +11,7 @@ import {HomeComponent} from "./components/home/home.component";
 import {ProfileComponent} from "./components/profile/profile.component";
 import {Auth} from "./services/auth.service";
 import {AuthGuard} from "./auth.guard";
+import {CityComponent} from "./components/city/city.component";
 
 // import {AUTH_PROVIDERS} from 'angular2-jwt';
 
@@ -36,7 +37,7 @@ import {AuthGuard} from "./auth.guard";
 
     ],
     declarations: [
-        AppComponent, HomeComponent, ProfileComponent
+        AppComponent, HomeComponent, ProfileComponent, CityComponent
     ],
     providers: [
         appRoutingProviders,

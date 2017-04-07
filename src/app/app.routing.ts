@@ -8,6 +8,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {ProfileComponent} from './components/profile/profile.component';
 import {AuthGuard} from "./auth.guard";
+import {CityComponent} from "./components/city/city.component";
 
 const appRoutes: Routes =[
     {
@@ -16,6 +17,10 @@ const appRoutes: Routes =[
     },{
         path:'profile',
         component: ProfileComponent,
+        canActivate:[AuthGuard]
+    },{
+        path:'city',
+        component: CityComponent,
         canActivate:[AuthGuard]
     }
 ];

@@ -15,6 +15,9 @@ var obj:string="some text";
 export class HttpService{
     constructor(private http:Http){}
 
+    getData(){
+        return this.http.get('http://localhost:3000/info?v=1');
+    }
     // postData(obj:string){
     //     // const body=JSON.stringify(obj);
     //     const body=obj;
